@@ -1,0 +1,6 @@
+{
+  "name": "Redline — Destination Terre · Bénin & Cotonou",
+  "description": "Voyage immersif vers la Terre, le Bénin et les rivages de Cotonou avec Redline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
