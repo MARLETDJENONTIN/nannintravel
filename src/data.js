@@ -14,7 +14,7 @@ export const departments = [
     subtitle: "Études & mobilité",
     description: "Études à l’étranger, accompagnement et mobilité professionnelle.",
     icon: "◎",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=85",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85",
     details: ["Orientation et études à l’étranger", "Accompagnement administratif", "Préparation de dossier", "Mobilité professionnelle"]
   },
   {
@@ -23,7 +23,7 @@ export const departments = [
     subtitle: "Formation & conduite",
     description: "Formation théorique et pratique pour apprendre à conduire.",
     icon: "↗",
-    image: "https://images.unsplash.com/photo-1449960159282-9a1b4c7b9e4b?auto=format&fit=crop&w=900&q=85",
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85",
     details: ["Formation au code de la route", "Cours de conduite", "Accompagnement à l’examen", "Conseils de sécurité routière"]
   },
   {
