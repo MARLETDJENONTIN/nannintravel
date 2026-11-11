@@ -30,4 +30,5 @@ Le dossier de production est `dist/`.
 - Les couleurs, espacements et responsive se trouvent dans `src/styles.css`.
 - Les images utilisent des URLs Unsplash distantes : une connexion internet est nécessaire pour les afficher.
 - Le formulaire de contact ouvre le logiciel de messagerie via `mailto:`. Pour un envoi automatique depuis le site, connecter un backend ou un service email (Resend, EmailJS, etc.).
-- Les coordonnées et les partenaires doivent être vérifiés avant mise en production. Les partenaires de la maquette sont des éléments de présentation, pas une confirmation de partenariat officiel.
+- Contacts actuels : bureau **+229 96 59 18 18** · WhatsApp **+229 96 89 57 80** · `contact@nanningroup.com` (général) · `mobility@nanningroup.com` (mobilité internationale). Ils sont définis dans `src/App.jsx` (topbar, section contact, pied de page).
+- Les partenaires de la maquette sont des éléments de présentation, pas une confirmation de partenariat officiel.

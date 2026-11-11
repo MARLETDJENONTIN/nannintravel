@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, MapPin, Facebook, Linkedin, Youtube, ArrowRight, Plane, MessageCircle, ChevronDown, Send } from "lucide-react";
 import { departments, values } from "./data";
 
-const waNumber = "2290197000000"; // À remplacer par le numéro WhatsApp officiel confirmé.
+const waNumber = "22996895780"; // Numéro WhatsApp officiel : +229 96 89 57 80 (format international sans « + » pour wa.me).
 const whatsappLink = `https://wa.me/${waNumber}?text=${encodeURIComponent("Bonjour NANNIN GROUP, je souhaite obtenir des informations.")}`;
 
 function Header() {
@@ -13,8 +13,9 @@ function Header() {
     <div className="topbar">
       <div className="container topbar-inner">
         <div className="top-contact">
-          <a href="tel:+2290197000000"><Phone size={13}/> +229 01 97 00 00 00</a>
+          <a href="tel:+22996591818"><Phone size={13}/> +229 96 59 18 18</a>
           <a href="mailto:contact@nanningroup.com"><Mail size={13}/> contact@nanningroup.com</a>
+          <a href="mailto:mobility@nanningroup.com"><Mail size={13}/> mobility@nanningroup.com</a>
           <span><MapPin size={13}/> Cotonou, Bénin</span>
         </div>
         <div className="top-right">
@@ -35,6 +36,7 @@ function Header() {
         <nav className={open ? "nav open" : "nav"}>
           <a className="active" href="#accueil" onClick={() => setOpen(false)}>Accueil</a>
           <a href="#apropos" onClick={() => setOpen(false)}>À propos</a>
+          <a href="#pourquoi" onClick={() => setOpen(false)}>Pourquoi nous ?</a>
           <a href="#departements" onClick={() => setOpen(false)}>Nos départements <ChevronDown size={12}/></a>
           <a href="#partenaires" onClick={() => setOpen(false)}>Nos partenaires</a>
           <a href="#actualites" onClick={() => setOpen(false)}>Actualités</a>
@@ -66,6 +68,32 @@ function Hero() {
   </section>;
 }
 
+function About() {
+  return <section className="section about-section" id="apropos">
+    <div className="container about-grid">
+      <div className="about-media">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=85" alt="L’équipe NAN NIN GROUP"/>
+        <div className="about-badge"><strong>5</strong><span>départements<br/>à votre service</span></div>
+      </div>
+      <div className="about-copy">
+        <span className="eyebrow">QUI SOMMES-NOUS ?</span>
+        <h2>À propos de <em>NAN NIN GROUP</em></h2>
+        <p>Basé à Cotonou, au Bénin, NAN NIN GROUP est un groupe multiservices dédié à vos projets de voyage, d’études, de mobilité et de formation. Cinq expertises complémentaires réunies au sein d’un même partenaire de confiance, au service de votre réussite.</p>
+        <ul className="about-list">
+          <li>Un interlocuteur unique pour des besoins variés</li>
+          <li>Un accompagnement administratif complet (formalités, ANIP)</li>
+          <li>Des solutions professionnelles et des partenariats B2B</li>
+          <li>Un ancrage local fort et un rayonnement international</li>
+        </ul>
+        <div className="about-actions">
+          <a className="btn btn-red" href="#departements">Nos départements <ArrowRight size={15}/></a>
+          <a className="btn btn-outline" href="#devis">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+  </section>;
+}
+
 function Departments() {
   return <section className="section departments" id="departements">
     <div className="container">
@@ -81,7 +109,7 @@ function Departments() {
 }
 
 function WhyUs() {
-  return <section className="why-section" id="apropos">
+  return <section className="why-section" id="pourquoi">
     <div className="container why-inner">
       <div className="why-title"><h2>Pourquoi<br/>nous <em>choisir ?</em></h2><div className="gold-line"></div></div>
       <div className="why-values">{values.map((v,i)=><div className="value" key={i}><div className="value-icon">{v.icon}</div><h3>{v.title}</h3><p>{v.text}</p></div>)}</div>
@@ -122,7 +150,9 @@ function QuoteContact() {
   };
   return <section className="contact-section" id="devis"><div className="container contact-grid">
     <div className="contact-copy"><span className="eyebrow">PARLONS DE VOTRE PROJET</span><h2>Construisons<br/><em>l’avenir ensemble.</em></h2><p>Vous avez un projet de voyage, d’études, de formation ou besoin d’une assistance ? Notre équipe est à votre écoute.</p>
-      <div className="contact-detail"><Mail/><div><small>Email</small><a href="mailto:contact@nanningroup.com">contact@nanningroup.com</a></div></div>
+      <div className="contact-detail"><Mail/><div><small>Email général</small><a href="mailto:contact@nanningroup.com">contact@nanningroup.com</a></div></div>
+      <div className="contact-detail"><Mail/><div><small>Email mobilité</small><a href="mailto:mobility@nanningroup.com">mobility@nanningroup.com</a></div></div>
+      <div className="contact-detail"><Phone/><div><small>Bureau</small><a href="tel:+22996591818">+229 96 59 18 18</a></div></div>
       <div className="contact-detail"><MapPin/><div><small>Adresse</small><strong>Cotonou, Bénin</strong></div></div>
       <a className="btn btn-outline light" href={whatsappLink} target="_blank" rel="noreferrer"><MessageCircle className="whatsapp"/> Écrire sur WhatsApp</a>
     </div>
@@ -142,7 +172,7 @@ function Footer() {
   return <footer className="footer">
     <div className="container footer-main">
       <div className="footer-brand"><div className="brand-mark"><span>🌐</span><Plane size={23}/></div><div><strong>NAN NIN <b>GROUP</b></strong><small>L’avenir se construit avec vous.</small></div><p>Un groupe multiservices pour accompagner vos ambitions au Bénin et à l’international.</p></div>
-      <div><h4>Nos coordonnées</h4><p><Phone size={14}/> +229 01 97 00 00 00</p><p><Mail size={14}/> contact@nanningroup.com</p><p><MapPin size={14}/> Cotonou, Bénin</p></div>
+      <div><h4>Nos coordonnées</h4><a href="tel:+22996591818"><Phone size={14}/> Bureau : +229 96 59 18 18</a><a href={whatsappLink} target="_blank" rel="noreferrer"><MessageCircle size={14}/> WhatsApp : +229 96 89 57 80</a><a href="mailto:contact@nanningroup.com"><Mail size={14}/> contact@nanningroup.com</a><a href="mailto:mobility@nanningroup.com"><Mail size={14}/> mobility@nanningroup.com</a><p><MapPin size={14}/> Cotonou, Bénin</p></div>
       <div><h4>Liens utiles</h4><a href="#apropos">À propos</a><a href="#departements">Nos départements</a><a href="#partenaires">Nos partenaires</a><a href="#devis">Demander un devis</a></div>
       <div id="social"><h4>Suivez-nous</h4><div className="socials"><a href="#social"><Facebook/></a><a href="#social"><Linkedin/></a><a href="#social"><Youtube/></a><a href={whatsappLink} target="_blank" rel="noreferrer"><MessageCircle/></a></div></div>
     </div>
@@ -151,5 +181,5 @@ function Footer() {
 }
 
 export default function App() {
-  return <><Header/><main><Hero/><Departments/><WhyUs/><Partners/><TestimonialsNews/><QuoteContact/></main><Footer/><a className="floating-whatsapp" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Contacter sur WhatsApp"><MessageCircle/><span>Contactez-nous<br/>sur WhatsApp</span></a></>;
+  return <><Header/><main><Hero/><About/><Departments/><WhyUs/><Partners/><TestimonialsNews/><QuoteContact/></main><Footer/><a className="floating-whatsapp" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Contacter sur WhatsApp"><MessageCircle/><span>Contactez-nous<br/>sur WhatsApp</span></a></>;
 }
